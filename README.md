@@ -8,7 +8,9 @@ RapidAPI is the world's first opensource API marketplace. It allows developers t
 ## Set-up:
 
 First of all, add script to your html file:
-  /*<script src="https://storage.googleapis.com/code-snippets/rapidapi.min.js"></script>*/
+```
+<script src="https://storage.googleapis.com/code-snippets/rapidapi.min.js"></script>
+```
 
 Once adding script, the last step is to initialize the SDK with your project name and project API Key:
     var rapid = new RapidAPI('PROJECT_NAME', 'API_KEY');
