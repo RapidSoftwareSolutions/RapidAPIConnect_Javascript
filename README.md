@@ -56,7 +56,7 @@ rapid.call('MicrosoftComputerVision', 'analyzeImage', {
 ```
 
 ### File from input html tag
-If the file is locally stored, you can read it using `fs` and pass the read stream to the block, like the following:
+If the file is locally stored, you can add it by input html tag and pass the file to the block, like the following:
 ```
 <input type="file" id="image_id"/>
 <script type="text/javascript">
