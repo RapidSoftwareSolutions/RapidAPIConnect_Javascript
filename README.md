@@ -62,7 +62,6 @@ If the file is locally stored, you can read it using `fs` and pass the read stre
 <script type="text/javascript">
     var image = document.getElementById("image_id");
     image.onchange = function(event) {
-        var image = document.getElementById("image_id");
         var rapid = new RapidAPI('PROJECT_NAME', 'API_KEY');
         rapid.call('MicrosoftComputerVision', 'analyzeImage', {
             'subscriptionKey': '#########################',
