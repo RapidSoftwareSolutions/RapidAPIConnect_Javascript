@@ -166,8 +166,15 @@ function RapidAPI (project, key) {
             socket.onmessage = function (event) {
                 try {
                     var data = JSON.parse(event.data);
+                    if(data.event === "phx_reply" && data.payload.status === "ok"){
+                        __eventCallback('join')();
+                        return;
+                    }
 
-                    if (data.payload.body) {
+                    if (data.payload.body && data.payload.body.msg && data.payload.body.msg.status === 'error') {
+                        __eventCallback('error')(data.payload.body.msg);
+                    }
+                    else{
                         __eventCallback('message')(data.payload.body.text);
                     }
                 }
