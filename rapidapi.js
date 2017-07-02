@@ -30,7 +30,7 @@ function RapidAPI (project, key) {
      * @return {string} Base URL for webhook event callbacks
      */
     this.callbackBaseURL = function () {
-        return "https://webhooks.rapidapi.com";
+        return "https://webhooks.rapidapi.io";
     }
 
     /**
@@ -147,7 +147,7 @@ function RapidAPI (project, key) {
 
             // user token
             var token = body.token;
-            var sock_url = "wss://webhooks.rapidapi.com/socket/websocket?token=" + token;
+            var sock_url = "wss://webhooks.rapidapi.io/socket/websocket?token=" + token;
 
 
             // open new socket to server
